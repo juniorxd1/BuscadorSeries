@@ -1,0 +1,111 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    background-image: url('https://images4.alphacoders.com/641/641968.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+.principal form {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.principal input {
+    margin: 15px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.principal button {
+    padding: 0 15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.container__fieldset {
+    border-radius: 10px;
+    background: black;
+    border: 4px solid black;
+    height: 93vh;
+    overflow-y: auto;
+    width: 100%;
+    margin: auto;
+}
+
+.container__fieldset::-webkit-scrollbar {
+    width: 10px;
+    /* Ancho de la barra de desplazamiento */
+}
+
+.container__fieldset::-webkit-scrollbar-track {
+    background: transparent;
+    /* Color de fondo de la pista de la barra de desplazamiento */
+}
+
+.container__h2 {
+    text-align: center;
+    font-family: 'Protest Riot', sans-serif;
+    ;
+}
+
+.container__imgs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.secundario {
+    margin: 10px;
+}
+
+.secundario__parrafo {
+    font-family: 'Protest Riot', sans-serif;
+    color: yellow;
+    font-weight: 400;
+}
+
+.secundario__contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .principal {
+        background-size: contain;
+
+        /* Cambiar a 'contain' para adaptarse al tamaño de la pantalla */
+    }
+}
+
+@media (max-width: 768px) {
+    .container__imgs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 390px) {
+    .container__imgs {
+        grid-template-columns: 1fr;
+    }
+}
